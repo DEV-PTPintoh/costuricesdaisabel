@@ -17,6 +17,10 @@ body {
   font-size: 14px;
  background: #fffff !important; }
 
+* {
+outline: 1px solid red;
+}
+
 a {
   text-decoration: none;
   -webkit-transition: .3s all ease;
