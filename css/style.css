@@ -131,7 +131,7 @@ a {
     position: relative;
     top: 0;
     right: 0;
-    left: 0;          /* ALTERADO */
+    left: 0;
     z-index: 2;
     max-width: 100%;
     height: auto;
@@ -140,25 +140,21 @@ a {
 @media (min-width: 768px) {
     .hero .hero-img-wrap img {
         right: 0;
-        left: 0;      /* ALTERADO */
+        left: 0;
     }
 }
 
 @media (min-width: 992px) {
     .hero .hero-img-wrap img {
-        left: 0;
-        top: 0px;
         position: relative;
-        right: 0px;
+        top: 0;
+        left: 0;
+        right: 0;
     }
 }
 
-@media (min-width: 1200px) {
-    .hero .hero-img-wrap img {
-        left: 0;
-        top: -80px;
-        right: -100px;
-    }
+.hero .hero-img-wrap:after {
+    display: none;
 }
 
 .btn {
