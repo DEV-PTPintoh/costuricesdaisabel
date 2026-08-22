@@ -127,12 +127,15 @@ a {
     color: #635E56;
     margin-botom: 30px; }
   .hero .hero-img-wrap {
-    position: relative; }
+    position: relative;
+  overflow: hidden;}
     .hero .hero-img-wrap img {
       position: relative;
       top: 0px;
       right: 0px;
       z-index: 2;
+      left: 0px;
+      max-width: 100%;
      
       left: -20px; }
       @media (min-width: 768px) {
