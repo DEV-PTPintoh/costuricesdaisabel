@@ -15,9 +15,9 @@ body {
   line-height: 28px;
   color: #635E56;
   font-size: 14px;
- background: #fffff !important; }
+  background-color: #ffffff !important; }
 
-* {
+  * {
 outline: 1px solid red;
 }
 
