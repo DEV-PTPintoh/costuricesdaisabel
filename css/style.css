@@ -17,6 +17,7 @@ body {
   font-size: 14px;
   background-color: #ffffff !important; }
 
+
 a {
   text-decoration: none;
   -webkit-transition: .3s all ease;
@@ -122,31 +123,30 @@ a {
   .hero p {
     color: #635E56;
     margin-botom: 30px; }
- .hero .hero-img-wrap {
+.hero .hero-img-wrap {
     position: relative;
-    overflow: hidden;   /* NOVO */
 }
 
 .hero .hero-img-wrap img {
     position: relative;
-    top: 0px;
-    right: 0px;
-    left: 0px;          /* ALTERADO (era -20px) */
+    top: 0;
+    right: 0;
+    left: 0;          /* ALTERADO */
     z-index: 2;
-    max-width: 100%;    /* NOVO */
-    height: auto;       /* NOVO */
+    max-width: 100%;
+    height: auto;
 }
 
 @media (min-width: 768px) {
     .hero .hero-img-wrap img {
-        right: 0px;
-        left: 0px;
+        right: 0;
+        left: 0;      /* ALTERADO */
     }
 }
 
 @media (min-width: 992px) {
     .hero .hero-img-wrap img {
-        left: 0px;
+        left: 0;
         top: -80px;
         position: absolute;
         right: -50px;
@@ -155,17 +155,11 @@ a {
 
 @media (min-width: 1200px) {
     .hero .hero-img-wrap img {
-        left: 0px;
+        left: 0;
         top: -80px;
         right: -100px;
     }
 }
-
-/* TESTE: remover os pontos */
-.hero .hero-img-wrap:after {
-    display: none;
-}
-
 
 .btn {
   font-weight: 600;
