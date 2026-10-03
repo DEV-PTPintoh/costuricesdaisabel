@@ -68,7 +68,7 @@
               
                     <span class="icon-cross"
                           onclick="enviarEmail(event, '', '')">
-                      <p><a href="shop.html" class="btn">Contatar a Isabel</a></p>
+                      <p><a href="shop.html" class="btn">Contate a Isabel</a></p>
                     </span>
             </div>
           </div>
@@ -88,6 +88,19 @@
 		<div class="untree_co-section product-section before-footer-section">
 		    <div class="container">
 		      	<div class="row">
+              <h3 class="product-title">🌸 Pesquisa</h3>
+              <p style="padding-bottom: 13px" >Filtre a galeria pelo tipo de artigo</p>
+<div class="search-container mb-4";>
+    <input type="text" id="productFilter" placeholder="Artigo..." class="form-control" style="height: 50px;">
+
+    <span id="clearSearch" class="clear-search" title="Limpar pesquisa">
+        ✕
+    </span>
+</div>
+
+<hr style="padding-bottom: 33px; color: white;">
+
+
 
 		      		<!-- Start Column 1 -->
 					<div class="col-12 col-md-4 col-lg-3 mb-5">
@@ -97,7 +110,7 @@
                	<p>Medidas: 26 x 18 cm </p>
               <strong class="product-price">Ref:B001</strong>
 
-                    <span class="icon-cross"
+                    <span class="icon-cross "
                           onclick="enviarEmail(event, 'Bolsa (Necessaire)', 'B001')">
                         <img src="images/mail icon.png" class="img-fluid">
                     </span>
@@ -547,7 +560,7 @@
                     src="images/envelope-outline.svg"
                     alt="Image"
                     class="img-fluid" /></span
-                ><span>Contatar Isabel</span>
+                ><span>Contate Isabel</span>
               </h3>
 
               <form action="#" class="row g-3">
@@ -603,7 +616,7 @@
             <div class="row links-wrap">
               <div class="col-6 col-sm-6 col-md-3">
                 <ul class="list-unstyled">
-                       <li><a href="contact.html">Contatar</a></li>
+             <li><a href="contact.html">Contate a Isabel</a></li>
 
                 </ul>
               </div>
@@ -676,6 +689,38 @@ function enviarEmail(event, produto, referencia) {
         '?subject=' + assunto +
         '&body=' + mensagem;
 }
+</script>
+<script>
+const productFilter = document.getElementById('productFilter');
+const clearSearch = document.getElementById('clearSearch');
+
+productFilter.addEventListener('input', function () {
+    const filtro = this.value.toLowerCase();
+
+    // Mostra ou esconde o X
+    clearSearch.style.display = filtro ? 'block' : 'none';
+
+    document.querySelectorAll('.col-lg-3').forEach(produto => {
+
+        const titulo = produto.querySelector('.product-title')
+            ?.textContent.toLowerCase() || '';
+
+        produto.style.display = titulo.includes(filtro) ? '' : 'none';
+    });
+});
+
+// Limpar pesquisa
+clearSearch.addEventListener('click', function () {
+
+    productFilter.value = '';
+    clearSearch.style.display = 'none';
+
+    document.querySelectorAll('.col-lg-3').forEach(produto => {
+        produto.style.display = '';
+    });
+
+    productFilter.focus();
+});
 </script>
 
 		<script src="js/bootstrap.bundle.min.js"></script>
