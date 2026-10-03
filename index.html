@@ -83,8 +83,9 @@
                As Costurices da Isabel nascem de uma paixão de infância pela costura, onde memórias, aprendizagem e dedicação se transformam em peças únicas, feitas à mão com carinho e atenção a cada detalhe.
               </p>
               <p>
-                <a href="shop.html" class="btn btn-secondary me-2">Explorar</a
-                >    <a href="contact.html" class="btn btn-white-outline">Contatar</a>
+                <a href="shop.html" class="btn btn-secondary me-2">Explorar</a>
+                
+                <a href="contact.html" class="btn btn-white-outline">Contatar</a>
               </p>
             </div>
           </div>
@@ -619,7 +620,7 @@ o trabalho feito à mão.
             <div class="row links-wrap">
               <div class="col-6 col-sm-6 col-md-3">
                 <ul class="list-unstyled">
-                       <li><a href="contact.html">Contatar</a></li>
+                      <li><a href="contact.html">>Contate a Isabel</a></li>
 
                 </ul>
               </div>
@@ -670,6 +671,30 @@ o trabalho feito à mão.
       </div>
     </footer>
     <!-- End Footer Section -->
+
+
+    <script>
+function enviarEmail(event, produto, referencia) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const assunto = encodeURIComponent(
+        'Pedido de informação - ' + produto
+    );
+
+    const mensagem = encodeURIComponent(
+        'Olá,\n\nTenho interesse no seguinte artigo:\n\n' +
+        'Produto: ' + produto + '\n' +
+        'Referência: ' + referencia + '\n\n' +
+        'Obrigado.'
+    );
+
+    window.location.href =
+        'mailto:costuricesdaisabel@gmail.com' +
+        '?subject=' + assunto +
+        '&body=' + mensagem;
+}
+</script>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/tiny-slider.js"></script>
