@@ -738,3 +738,28 @@ textarea {
     height: 50px;
     border-radius: 50%;
     background: rgba(59, 93, 80, 0.2); }
+
+
+.search-container {
+    position: relative;
+}
+
+.search-container input {
+    padding-right: 40px;
+}
+
+.clear-search {
+    position: absolute;
+    right: 33px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #999;
+    font-size: 18px;
+    display: none;
+    user-select: none;
+}
+
+.clear-search:hover {
+    color: #333;
+}
